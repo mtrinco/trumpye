@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import './components/Button.css';
-import Button from './components/Button';
 import trumpImg from "./assets/trump.jpg";
 import kanyeImg from "./assets/kanye.jpeg";
 
