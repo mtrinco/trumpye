@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  background-color: #35495E;
+  background-color: #E0E0E0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #E0E0E0;
+  color: #35495E;
   font-family: "Roboto", sans-serif;
 }
 
@@ -103,7 +103,7 @@ p.quote {
 }
 
 .card-front, .card-back {
-  background-color: #35495E;
+  background-color: #E0E0E0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -139,7 +139,7 @@ p.quote {
 }
 
 .card-back--message {
-  color: #E0E0E0;
+  color: #35495E;
   font-weight: 700;
   font-size: 24px;
   margin: 0 0 24px 0;
@@ -148,7 +148,7 @@ p.quote {
 .card-front--circle, .card-back--circle {
   width: 200px;
   height: 200px;
-  background-color: #35495E;
+  background-color: #E0E0E0;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1), -4px -4px 4px rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   display: flex;
@@ -182,7 +182,7 @@ p.quote {
 }
 
 .card-back {
-  background-color: #35495E;
+  background-color: #E0E0E0;
   transform: rotateY(180deg);
 }
 
@@ -195,14 +195,14 @@ p.quote {
 .btn {
   min-width: 135px;
   height: 50px;
-  background-color: #35495E;
+  background-color: #E0E0E0;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   outline: none;
   font-size: 24px;
   font-weight: 700;
   padding: 8px 32px;
-  color: #E0E0E0;
+  color: #35495E;
   border: none;
 
   transition: box-shadow 0.15s ease;
