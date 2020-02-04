@@ -87,11 +87,11 @@ p.quote {
   border-radius: 4px;
 }
 
-.card .card-inner.Trump {
+.card-inner.Trump {
   transform: rotateY(-180deg);
 }
 
-.card .card-inner.Kanye {
+.card-inner.Kanye {
   transform: rotateY(180deg);
 }
 
@@ -100,9 +100,7 @@ p.quote {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-}
-
-.card-front, .card-back {
+  border-radius: 4px;
   background-color: #E0E0E0;
   display: flex;
   flex-direction: column;
@@ -120,7 +118,12 @@ p.quote {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 24px 12px 24px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-back--top img {
+  width: 100%;
 }
 
 .card-front--bottom {
@@ -136,10 +139,11 @@ p.quote {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0 0 4px 4px;
 }
 
 .card-back--message {
-  color: #35495E;
+  color: #E0E0E0;
   font-weight: 700;
   font-size: 24px;
   margin: 0 0 24px 0;

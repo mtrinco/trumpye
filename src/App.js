@@ -8,6 +8,8 @@ function App() {
   const [quote, setQuote] = useState('');
   const [answer, setAnswer] = useState('');
   const [guess, setGuess] = useState('');
+  const [hex, setHex] = useState('');
+  const [text, setText] = useState('');
   const [loaded, setLoaded] = useState(false);
 
   const trump = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
@@ -31,8 +33,14 @@ function App() {
     fetchData();
   }, []);
 
+  function handleClick(res) {
+    setGuess(res);
+    setHex(res === answer ? "#63B7AF" : "#C9485B");
+    setText(res === answer ? "Correct" : "Wrong");
+  }
+
   function reset() {
-    setGuess("");
+    setGuess("reset");
     fetchData();
   }
 
@@ -59,20 +67,16 @@ function App() {
                 </div>
               </div>
               <div className="card-front--bottom">
-                <button className="btn" onClick={() => setGuess("Trump")}>Trump</button>
-                <button className="btn" onClick={() => setGuess("Kanye")}>Kanye</button>
+                <button className="btn" onClick={() => handleClick("Trump")}>Trump</button>
+                <button className="btn" onClick={() => handleClick("Kanye")}>Kanye</button>
               </div>
             </div>
             <div className="card-back">
               <div className="card-back--top">
-                <div className={`card-back--circle ${guess}`}>
-                  <div className="card-back--border" style={{ borderColor: guess === answer ? "#63B7AF" : "#C9485B" }}>
-                    <img src={answer === "Trump" ? trumpImg : kanyeImg} />
-                  </div>
-                </div>
+                <img src={answer === "Trump" ? trumpImg : kanyeImg} alt={answer === "Trump" ? "Trump" : "Kanye"} />
               </div>
-              <div className="card-back--bottom">
-                <p className="card-back--message">{ guess === answer ? `Correct!  It was ${answer}.` : `Wrong!  It was ${answer}.` }</p>
+              <div className="card-back--bottom" style={{ backgroundColor: hex }}>
+                <p className="card-back--message">{ `${text}!  It was ${answer}.` }</p>
                 <button className="btn" onClick={() => reset()}>Next</button>
               </div>
             </div>
